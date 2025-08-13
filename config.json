@@ -10,13 +10,13 @@
         },
         "Filmpertutti": {
             "url": "https://filmpertutti.works",
-            "enabled": "1"
+            "enabled": "0"
         },
         "Tantifilm": {
             "url": "https://tantifilm.exchange",
             "TF_ForwardProxy": "0",
             "TF_PROXY": "1",
-            "enabled": "1"
+            "enabled": "0"
         },
         "Mysterius": {
             "enabled": "0"
@@ -62,7 +62,7 @@
         "Onlineserietv": {
             "url": "https://onlineserietv.com",
             "domain": "com",
-            "enabled": "1",
+            "enabled": "0",
             "OST_ForwardProxy": "1",
             "OST_PROXY": "0"
         },
@@ -74,11 +74,11 @@
         },
         "SkyStreaming": {
             "url": "https://skystreaming.watch",
-            "enabled": "1"
+            "enabled": "0"
         },
         "DaddyLiveHD": {
             "url": "https://daddylive.mp",
-            "enabled": "1"
+            "enabled": "0"
         }
     },
     "General": {
