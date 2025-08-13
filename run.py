@@ -11,6 +11,8 @@ from Src.API.guardaserie import guardaserie
 from Src.API.guardahd import guardahd
 import  Src.Utilities.config as config
 import logging
+import os
+import sys
 from Src.API.okru import okru_get_url
 from Src.API.animeworld import animeworld
 from Src.Utilities.dictionaries import okru,STREAM,extra_sources,webru_vary,webru_dlhd,provider_map,skystreaming
@@ -25,6 +27,7 @@ from static.static import HTML
 from urllib.parse import unquote
 from Src.Utilities.m3u8 import router as m3u8_clone
 import urllib.parse
+
 #Configure Env Vars
 Global_Proxy = config.Global_Proxy
 if Global_Proxy == "1":
@@ -417,8 +420,16 @@ async def addon_stream(request: Request,config, type, id,):
 
     return respond_with(streams)
 
+logging.disable(logging.CRITICAL)
+
+logging.getLogger("uvicorn").disabled = True
+logging.getLogger("uvicorn.error").disabled = True
+logging.getLogger("uvicorn.access").disabled = True
+logging.getLogger("uvicorn.asgi").disabled = True
+logging.getLogger("uvicorn.protocols.http.h11_impl").disabled = True
+
 
 if __name__ == '__main__':
     import uvicorn
-    uvicorn.run("run:app", host=HOST, port=PORT, log_level="info", workers=1)
+    uvicorn.run("run:app", host=HOST, port=PORT, log_level="critical", log_access=False, workers=1)
     
