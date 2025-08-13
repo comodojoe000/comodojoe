@@ -61,7 +61,6 @@
         },
         "Onlineserietv": {
             "url": "https://onlineserietv.com",
-            "domain": "com",
             "enabled": "1",
             "OST_ForwardProxy": "1",
             "OST_PROXY": "0"
