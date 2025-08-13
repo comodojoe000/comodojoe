@@ -431,5 +431,5 @@ logging.getLogger("uvicorn.protocols.http.h11_impl").disabled = True
 
 if __name__ == '__main__':
     import uvicorn
-    uvicorn.run("run:app", host=HOST, port=PORT, log_level="critical", log_access=False, workers=1)
+    uvicorn.run("run:app", host=HOST, port=PORT, log_level="critical", access_log=False, workers=1)
     
