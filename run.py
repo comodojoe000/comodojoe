@@ -420,16 +420,16 @@ async def addon_stream(request: Request,config, type, id,):
 
     return respond_with(streams)
 
-logging.disable(logging.CRITICAL)
+#logging.disable(logging.CRITICAL)
 
-logging.getLogger("uvicorn").disabled = True
-logging.getLogger("uvicorn.error").disabled = True
-logging.getLogger("uvicorn.access").disabled = True
-logging.getLogger("uvicorn.asgi").disabled = True
-logging.getLogger("uvicorn.protocols.http.h11_impl").disabled = True
+#logging.getLogger("uvicorn").disabled = True
+#logging.getLogger("uvicorn.error").disabled = True
+#logging.getLogger("uvicorn.access").disabled = True
+#logging.getLogger("uvicorn.asgi").disabled = True
+#logging.getLogger("uvicorn.protocols.http.h11_impl").disabled = True
 
 
 if __name__ == '__main__':
     import uvicorn
-    uvicorn.run("run:app", host=HOST, port=PORT, log_level="critical", access_log=False, workers=1)
+    uvicorn.run("run:app", host=HOST, port=PORT, log_level="info", access_log=True, workers=1)
     
